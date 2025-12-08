@@ -1,5 +1,13 @@
 import { LinkModulesExtraFields, ModuleJoinerConfig } from "@medusajs/types"
-import { camelToSnakeCase, isObject, pluralize, toPascalCase } from "../common"
+import {
+  camelToSnakeCase,
+  getCallerFilePath,
+  isFileDisabled,
+  isObject,
+  MEDUSA_SKIP_FILE,
+  pluralize,
+  toPascalCase,
+} from "../common"
 import { composeLinkName } from "../link/compose-link-name"
 
 export const DefineLinkSymbol = Symbol.for("DefineLink")
@@ -193,6 +201,11 @@ export function defineLink(
   rightService: DefineLinkInputSource | DefineReadOnlyLinkInputSource,
   linkServiceOptions?: ExtraOptions | ReadOnlyExtraOptions
 ): DefineLinkExport {
+  const callerFilePath = getCallerFilePath()
+  if (isFileDisabled(callerFilePath ?? "")) {
+    return { [MEDUSA_SKIP_FILE]: true } as any
+  }
+
   const serviceAObj = prepareServiceConfig(leftService)
   const serviceBObj = prepareServiceConfig(rightService)
 

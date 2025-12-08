@@ -117,7 +117,8 @@ The code snippets in this section assume that your forked Medusa project and the
     "@medusajs/draft-order": "file:../medusa/packages/plugins/draft-order",
     "@medusajs/deps": "file:../medusa/packages/deps",
     "@medusajs/caching-redis": "file:../medusa/packages/modules/providers/caching-redis",
-    "@medusajs/caching": "file:../medusa/packages/modules/caching"
+    "@medusajs/caching": "file:../medusa/packages/modules/caching",
+    "@medusajs/translation": "file:../medusa/packages/modules/translation",
 }
 ```
 

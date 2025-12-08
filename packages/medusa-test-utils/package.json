@@ -25,6 +25,7 @@
   "author": "Medusa",
   "license": "MIT",
   "devDependencies": {
+    "@medusajs/core-flows": "2.12.1",
     "@medusajs/framework": "2.12.1"
   },
   "dependencies": {
@@ -35,10 +36,14 @@
     "ulid": "^2.3.0"
   },
   "peerDependencies": {
+    "@medusajs/core-flows": "2.12.1",
     "@medusajs/framework": "2.12.1",
     "@medusajs/medusa": "2.12.1"
   },
   "peerDependenciesMeta": {
+    "@medusajs/core-flows": {
+      "optional": true
+    },
     "@medusajs/medusa": {
       "optional": true
     }

@@ -1,4 +1,9 @@
-import { ContainerRegistrationKeys, parseCorsOrigins, FeatureFlag } from "@medusajs/utils"
+import {
+  ContainerRegistrationKeys,
+  FeatureFlag,
+  isFileDisabled,
+  parseCorsOrigins,
+} from "@medusajs/utils"
 import cors, { CorsOptions } from "cors"
 import type {
   ErrorRequestHandler,
@@ -20,6 +25,7 @@ import type {
 } from "./types"
 
 import { Logger, MedusaContainer } from "@medusajs/types"
+import { join } from "path"
 import { configManager } from "../config"
 import { MiddlewareFileLoader } from "./middleware-file-loader"
 import { authenticate, AuthType } from "./middlewares"
@@ -110,6 +116,38 @@ export class ApiLoader {
   }
 
   /**
+   * Checks if a route file is disabled for a given matcher and method
+   * by trying to find the corresponding route file path
+   */
+  #isRouteFileDisabled(matcher: string): boolean {
+    const routePathSegments = matcher
+      .split("/")
+      .filter(Boolean)
+      .map((segment) => {
+        if (segment.startsWith(":")) {
+          return `[${segment.slice(1)}]`
+        }
+        return segment
+      })
+
+    for (const sourceDir of this.#sourceDirs) {
+      for (const ext of [".ts", ".js"]) {
+        const routeFilePath = join(
+          sourceDir,
+          ...routePathSegments,
+          `route${ext}`
+        )
+
+        if (isFileDisabled(routeFilePath)) {
+          return true
+        }
+      }
+    }
+
+    return false
+  }
+
+  /**
    * Registers a middleware or a route handler with Express
    */
   #registerExpressHandler(
@@ -145,6 +183,14 @@ export class ApiLoader {
       ? route.methods
       : [route.methods]
     methods.forEach((method) => {
+      const isDisabled = this.#isRouteFileDisabled(route.matcher)
+      if (isDisabled) {
+        this.#logger.debug(
+          `skipping disabled route middleware registration for ${method} ${route.matcher}`
+        )
+        return
+      }
+
       this.#logger.debug(
         `registering route middleware ${method} ${route.matcher}`
       )

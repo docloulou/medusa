@@ -30,6 +30,7 @@ export * from "./totals"
 export * from "./totals/big-number"
 export * from "./user"
 export * from "./caching"
+export * from "./translations"
 export * from "./dev-server"
 
 export const MedusaModuleType = Symbol.for("MedusaModule")

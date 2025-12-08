@@ -101,6 +101,7 @@
     "@medusajs/store": "2.12.1",
     "@medusajs/tax": "2.12.1",
     "@medusajs/telemetry": "2.12.1",
+    "@medusajs/translation": "2.12.1",
     "@medusajs/user": "2.12.1",
     "@medusajs/workflow-engine-inmemory": "2.12.1",
     "@medusajs/workflow-engine-redis": "2.12.1",
