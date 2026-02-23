@@ -1,5 +1,12 @@
 # @medusajs/rbac
 
+## 3.0.0
+
+### Patch Changes
+
+- Updated dependencies [[`7aca778ae56069371f5d26a757d3b2276d524776`](https://github.com/medusajs/medusa/commit/7aca778ae56069371f5d26a757d3b2276d524776), [`77d899e135ed75668ca7d7b01a8ed4f0c1fe0ac8`](https://github.com/medusajs/medusa/commit/77d899e135ed75668ca7d7b01a8ed4f0c1fe0ac8)]:
+  - @medusajs/framework@3.0.0
+
 ## 2.13.1
 
 ### Patch Changes

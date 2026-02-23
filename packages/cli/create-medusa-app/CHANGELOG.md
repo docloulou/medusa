@@ -1,5 +1,15 @@
 # Change Log
 
+## 3.0.0
+
+### Patch Changes
+
+- [#14681](https://github.com/medusajs/medusa/pull/14681) [`94fc900582bc11213edbea7b5dfd88c167233ae5`](https://github.com/medusajs/medusa/commit/94fc900582bc11213edbea7b5dfd88c167233ae5) Thanks [@shahednasser](https://github.com/shahednasser)! - fix(create-medusa-app): fix installations with storefronts for pnpm
+
+- Updated dependencies []:
+  - @medusajs/deps@3.0.0
+  - @medusajs/telemetry@3.0.0
+
 ## 2.13.1
 
 ### Patch Changes
