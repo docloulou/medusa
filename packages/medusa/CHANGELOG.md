@@ -1,5 +1,78 @@
 # Change Log
 
+## 3.0.0
+
+### Minor Changes
+
+- [#14557](https://github.com/medusajs/medusa/pull/14557) [`42322f44eaaf997e9ab7af2ca1e8621a08a8ca01`](https://github.com/medusajs/medusa/commit/42322f44eaaf997e9ab7af2ca1e8621a08a8ca01) Thanks [@bouazzaayyoub](https://github.com/bouazzaayyoub)! - feat(medusa,types): add metadata field to AdminUpsertStockLocationAddress and validators
+
+### Patch Changes
+
+- [#14660](https://github.com/medusajs/medusa/pull/14660) [`05262c0197bcc3c9cec89a3d95863916dba47af3`](https://github.com/medusajs/medusa/commit/05262c0197bcc3c9cec89a3d95863916dba47af3) Thanks [@Fadyy22](https://github.com/Fadyy22)! - chore(core-flows,medusa): Pass `created_by` to `createOrderShipmentWorkflow` in create order shipment admin endpoint and pass `marked_shipped_by` to `createShipmentWorkflow`
+
+- [#14146](https://github.com/medusajs/medusa/pull/14146) [`d2ce360875bafc3fc0c367384b9b631e77130726`](https://github.com/medusajs/medusa/commit/d2ce360875bafc3fc0c367384b9b631e77130726) Thanks [@adevinwild](https://github.com/adevinwild)! - Introduce filtering orders by total price on the API and Admin UI
+
+- [#14053](https://github.com/medusajs/medusa/pull/14053) [`074a3ea05f2b86ce72a5e668a7616768e81293dd`](https://github.com/medusajs/medusa/commit/074a3ea05f2b86ce72a5e668a7616768e81293dd) Thanks [@NicolasGorga](https://github.com/NicolasGorga)! - fix(medusa): resolve user_id from user linked to secret key on draft order edit with api-key auth
+
+- [#14676](https://github.com/medusajs/medusa/pull/14676) [`1b5e5739b1d553d230b5602092f4c809479cf572`](https://github.com/medusajs/medusa/commit/1b5e5739b1d553d230b5602092f4c809479cf572) Thanks [@carlos-r-l-rodrigues](https://github.com/carlos-r-l-rodrigues)! - chore(medusa): add role users endpoint
+
+- [#14663](https://github.com/medusajs/medusa/pull/14663) [`dc2b87810254ccabd382ececca0ae771cb9e64be`](https://github.com/medusajs/medusa/commit/dc2b87810254ccabd382ececca0ae771cb9e64be) Thanks [@carlos-r-l-rodrigues](https://github.com/carlos-r-l-rodrigues)! - chore(medusa): admin list policies
+
+- Updated dependencies [[`05262c0197bcc3c9cec89a3d95863916dba47af3`](https://github.com/medusajs/medusa/commit/05262c0197bcc3c9cec89a3d95863916dba47af3), [`f37f029799cad7ee0337aeab625df5e272de2363`](https://github.com/medusajs/medusa/commit/f37f029799cad7ee0337aeab625df5e272de2363), [`ff80a437e3fed60a48698c21b2cb325cd75b1f07`](https://github.com/medusajs/medusa/commit/ff80a437e3fed60a48698c21b2cb325cd75b1f07), [`09a80ab97aad62b65320c745899eb8517d256b40`](https://github.com/medusajs/medusa/commit/09a80ab97aad62b65320c745899eb8517d256b40), [`29d3dee13700d36a70aa55b8f2a01a5cbc0b42d0`](https://github.com/medusajs/medusa/commit/29d3dee13700d36a70aa55b8f2a01a5cbc0b42d0), [`7aca778ae56069371f5d26a757d3b2276d524776`](https://github.com/medusajs/medusa/commit/7aca778ae56069371f5d26a757d3b2276d524776), [`7a27e8ad8d7771eeecd1fb648a458f56abab71f9`](https://github.com/medusajs/medusa/commit/7a27e8ad8d7771eeecd1fb648a458f56abab71f9), [`77d899e135ed75668ca7d7b01a8ed4f0c1fe0ac8`](https://github.com/medusajs/medusa/commit/77d899e135ed75668ca7d7b01a8ed4f0c1fe0ac8), [`ec8f2566aa2547921f68d5aeba8d11ec4bcea9a2`](https://github.com/medusajs/medusa/commit/ec8f2566aa2547921f68d5aeba8d11ec4bcea9a2), [`fe529f214a789b7e94fd0438c631d9f6b5cf5290`](https://github.com/medusajs/medusa/commit/fe529f214a789b7e94fd0438c631d9f6b5cf5290), [`63b7d5f1bee265959db73236c509dc7c9d0c1525`](https://github.com/medusajs/medusa/commit/63b7d5f1bee265959db73236c509dc7c9d0c1525), [`2b795b6cc1ca1b0787f014784c9cbf06d6ab6e96`](https://github.com/medusajs/medusa/commit/2b795b6cc1ca1b0787f014784c9cbf06d6ab6e96)]:
+  - @medusajs/core-flows@3.0.0
+  - @medusajs/admin-bundler@3.0.0
+  - @medusajs/payment-stripe@3.0.0
+  - @medusajs/order@3.0.0
+  - @medusajs/framework@3.0.0
+  - @medusajs/event-bus-redis@3.0.0
+  - @medusajs/draft-order@3.0.0
+  - @medusajs/analytics@3.0.0
+  - @medusajs/api-key@3.0.0
+  - @medusajs/auth@3.0.0
+  - @medusajs/cache-inmemory@3.0.0
+  - @medusajs/cache-redis@3.0.0
+  - @medusajs/caching@3.0.0
+  - @medusajs/cart@3.0.0
+  - @medusajs/currency@3.0.0
+  - @medusajs/customer@3.0.0
+  - @medusajs/event-bus-local@3.0.0
+  - @medusajs/file@3.0.0
+  - @medusajs/fulfillment@3.0.0
+  - @medusajs/index@3.0.0
+  - @medusajs/inventory@3.0.0
+  - @medusajs/link-modules@3.0.0
+  - @medusajs/locking@3.0.0
+  - @medusajs/notification@3.0.0
+  - @medusajs/payment@3.0.0
+  - @medusajs/pricing@3.0.0
+  - @medusajs/product@3.0.0
+  - @medusajs/promotion@3.0.0
+  - @medusajs/analytics-local@3.0.0
+  - @medusajs/analytics-posthog@3.0.0
+  - @medusajs/auth-emailpass@3.0.0
+  - @medusajs/auth-github@3.0.0
+  - @medusajs/auth-google@3.0.0
+  - @medusajs/caching-redis@3.0.0
+  - @medusajs/file-local@3.0.0
+  - @medusajs/file-s3@3.0.0
+  - @medusajs/fulfillment-manual@3.0.0
+  - @medusajs/locking-postgres@3.0.0
+  - @medusajs/locking-redis@3.0.0
+  - @medusajs/notification-local@3.0.0
+  - @medusajs/notification-sendgrid@3.0.0
+  - @medusajs/rbac@3.0.0
+  - @medusajs/region@3.0.0
+  - @medusajs/sales-channel@3.0.0
+  - @medusajs/settings@3.0.0
+  - @medusajs/stock-location@3.0.0
+  - @medusajs/store@3.0.0
+  - @medusajs/tax@3.0.0
+  - @medusajs/translation@3.0.0
+  - @medusajs/user@3.0.0
+  - @medusajs/workflow-engine-inmemory@3.0.0
+  - @medusajs/workflow-engine-redis@3.0.0
+  - @medusajs/telemetry@3.0.0
+
 ## 2.13.1
 
 ### Patch Changes

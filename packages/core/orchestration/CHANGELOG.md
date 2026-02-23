@@ -1,5 +1,15 @@
 # @medusajs/orchestration
 
+## 3.0.0
+
+### Patch Changes
+
+- [#14719](https://github.com/medusajs/medusa/pull/14719) [`583deb57ea5805a1cce7be8342bd8533b29682b5`](https://github.com/medusajs/medusa/commit/583deb57ea5805a1cce7be8342bd8533b29682b5) Thanks [@carlos-r-l-rodrigues](https://github.com/carlos-r-l-rodrigues)! - fix(orchestration): continueOnPermanentFailure when timeout
+
+- Updated dependencies [[`f37f029799cad7ee0337aeab625df5e272de2363`](https://github.com/medusajs/medusa/commit/f37f029799cad7ee0337aeab625df5e272de2363), [`d0e6f710c3f8305b58ac39131a125274987cae05`](https://github.com/medusajs/medusa/commit/d0e6f710c3f8305b58ac39131a125274987cae05), [`77d899e135ed75668ca7d7b01a8ed4f0c1fe0ac8`](https://github.com/medusajs/medusa/commit/77d899e135ed75668ca7d7b01a8ed4f0c1fe0ac8)]:
+  - @medusajs/utils@3.0.0
+  - @medusajs/deps@3.0.0
+
 ## 2.13.1
 
 ### Patch Changes
